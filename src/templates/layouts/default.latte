@@ -1,48 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{$lang}">
     <head>
         <meta charset="utf-8">
         <title>{$title}</title>
 
-        <meta name="keywords" content="">
-        <meta name="description" content="">
-        <meta name="author" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+        <meta n:ifset="$keywords" name="keywords" content="{$keywords}">
+        <meta n:ifset="$description" name="description" content="{$description}">
+        <meta n:ifset="$author" name="author" content="{$author}">
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1">
         <meta name="format-detection" content="telephone=no">
         <meta name="mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-title" content="{$title}">
         <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="theme-color" content="#ffffff">
+        <meta name="theme-color" content="{$themeColor}">
 
-        {if isset($prefetch)}
-            {foreach $prefetch as $url}
-                <link rel="preconnect" href="{$url}" crossorigin>
-                <link rel="dns-prefetch" href="{$url}">
-            {/foreach}
-        {/if}
+        <link
+            n:foreach="$assets->links->main as $url"
+            href="{$url->href|asset}"
+            rel="{isset($url->rel) ? $url->rel}"
+            as="{isset($url->as) ? $url->as}"
+            type="{isset($url->type) ? $url->type}"
+            crossorigin="{isset($url->crossorigin) ? '' : null}"
+        >
 
-        {if isset($preload)}
-            <link
-                n:foreach="$preload as $url"
-                href="{$url->href|asset}"
-                {if isset($url->rel)}rel="{$url->rel}"{else}rel="preload"{/if}
-                {if isset($url->as)}as="{$url->as}"{/if}
-                {if isset($url->type)}type="{$url->type}"{/if}
-                {if isset($url->crossorigin)}crossorigin{/if}
-            >
-        {/if}
-
-        <link n:foreach="$assets->css->all as $url" href="{$url|asset}" rel="stylesheet">
-
-        {if isset($modulepreload)}
-            <link n:foreach="$modulepreload as $url" href="{$url|asset}" rel="modulepreload">
-        {/if}
-
-        <script>
+        <script n:if="$darkMode">
             (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) && document.documentElement.classList.add('dark')
         </script>
 
-        <script src="{$assets->js->main|asset}" type="module"></script>
+        <script n:ifset="$assets->scripts->main" src="{$assets->scripts->main|asset}" type="module"></script>
 
         <link rel="icon" type="image/svg+xml" href="/favicons/favicon.svg">
         <link rel="icon" type="image/webp" href="/favicons/favicon-512.webp">
@@ -50,22 +35,22 @@
         <link rel="manifest" href="/favicons/manifest.webmanifest">
     </head>
     <body data-controller="x-app invoke" data-naja-snippet-append>
-        {include '../components/(layout)/Header.latte'}
-        <main class="x-main view-transition-main">
-            {include '../utils/sections.latte', sections => $body}
+        {if isset($head)}
+            {include '../utils/components.latte', components => $head}
+        {/if}
+        <main class="x-main view-transition-main" n:ifset="$body">
+            {include '../utils/components.latte', components => $body}
         </main>
-        {include '../components/(layout)/Footer.latte'}
+        {if isset($foot)}
+            {include '../utils/components.latte', components => $foot}
+        {/if}
 
         {if $cookieConsent}
             {include '../components/cookieconsent/CookieConsentDialog.latte'}
         {/if}
 
-        <ol class="x-toaster items-end">
-            {*include TEMPLATES_DIR . 'Components/(ui)/Toast.latte'*}
-        </ol>
-
-        {if true} {* load only on first load in production *}
-            {fetch('/src/icons.svg')|noescape}
-        {/if}
+        <div class="x-toaster items-end" aria-live="polite" aria-atomic="true" n:if="$showToast">
+            {include '../components/(ui)/Toast.latte'}
+        </div>
     </body>
 </html>

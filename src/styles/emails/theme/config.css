@@ -1,16 +1,10 @@
+@import "winduum-email/tailwindcss/theme/config/font.css";
+@import "winduum-email/tailwindcss/theme/config/radius.css";
+@import "winduum-email/tailwindcss/theme/config/spacing.css";
+
+@custom-media --media-container (width < 640px);
+
 @theme {
-  --default-font-family:
-    "Roboto",
-    -apple-system,
-    "BlinkMacSystemFont",
-    "Segoe UI",
-    "Helvetica",
-    "Arial",
-    sans-serif,
-    "Apple Color Emoji",
-    "Segoe UI Emoji",
-    "Segoe UI Symbol";
-  --spacing-container: 24px;
-  --radius: 12px;
   --container: 600px;
+  --spacing-container: 20px;
 }

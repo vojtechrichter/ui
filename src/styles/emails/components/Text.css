@@ -1,15 +1,1 @@
-.x-text {
-  font-size: 16px;
-  line-height: 24px;
-  mso-line-height-rule: exactly;
-
-  b,
-  strong {
-    font-weight: 700;
-  }
-
-  &.sm {
-    font-size: 14px;
-    line-height: 20px;
-  }
-}
+@import "winduum-email/src/components/text/default.css";

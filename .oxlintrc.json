@@ -1,0 +1,4 @@
+{
+  "extends": ["./node_modules/@newlogic-digital/core/eslint-stylistic.json"],
+  "ignorePatterns": ["**/+.js"]
+}

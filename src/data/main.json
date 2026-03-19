@@ -1,36 +1,58 @@
 {
   "baseUrl": "https://localhost:5173",
   "lang": "en",
+  "themeColor": "#ffffff",
+  "darkMode": false,
   "cookieConsent": true,
-  "prefetch": [
-    "https://cdn.jsdelivr.net",
-    "https://fonts.gstatic.com",
-    "https://fonts.googleapis.com"
-  ],
-  "preload": [
+  "showToast": false,
+  "head": [
     {
-      "href": "https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=block",
-      "rel": "preload stylesheet",
-      "as": "style",
-      "crossorigin": true
+      "src": "components/header/Header.latte"
+    }
+  ],
+  "foot": [
+    {
+      "src": "components/footer/Footer.latte"
     }
   ],
   "assets": {
-    "css": {
-      "all": [
-        "/src/styles/main.css"
-      ]
+    "links": {
+      "main": [
+        {
+          "href": "https://cdn.jsdelivr.net",
+          "rel": "dns-prefetch"
+        },
+        {
+          "href": "https://fonts.googleapis.com",
+          "rel": "preconnect"
+        },
+        {
+          "href": "https://fonts.gstatic.com",
+          "rel": "preconnect",
+          "crossorigin": true
+        },
+        {
+          "href": "/src/styles/main.css",
+          "rel": "stylesheet"
+        },
+        {
+          "href": "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=block",
+          "rel": "stylesheet"
+        }
+      ],
+      "emails": {
+        "main": "/src/styles/emails/main.css"
+      }
     },
-    "js": {
+    "scripts": {
       "main": "/src/scripts/main.js"
     }
   },
   "media": {
-    "min-xl": "(min-width: 1216px)",
-    "max-lg": "(max-width: 959px)",
-    "min-lg": "(min-width: 960px)",
-    "min-md": "(min-width: 744px)",
-    "max-md": "(max-width: 767px)",
-    "min-xs": "(min-width: 360px)"
+    "xl": "76rem",
+    "lg": "60rem",
+    "md": "46.5rem",
+    "sm": "26rem",
+    "xs": "22.5rem"
   }
 }

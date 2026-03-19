@@ -4,7 +4,7 @@ import stimulus from 'winduum-stimulus'
 import { initAfter } from '../utils/+.js'
 
 const initConfig = {
-  controllers: ['x-button', 'x-control', 'x-text', 'x-check', 'x-dialog'],
+  controllers: ['x-button', 'x-control', 'x-text', 'x-check', 'x-dialog', 'x-image'],
   actions: [
     ['.x-button', 'click->x-button#ripple'],
     ['.x-check', 'change->x-form#validateField'],

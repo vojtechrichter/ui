@@ -3,3 +3,25 @@
 @import "winduum/src/utilities/skeleton/props/default.css" layer(theme);
 @import "winduum/src/utilities/spinner/keyframes/ring.css";
 @import "winduum/tailwindcss/utilities/index.css";
+
+@layer theme {
+  :root,
+  :host {
+    --container-width: 82rem;
+    --container-padding: 1.25rem;
+  }
+
+  @media (--media-md) {
+    :root,
+    :host {
+      --container-padding: 2rem;
+    }
+  }
+
+  @media (--media-lg) {
+    :root,
+    :host {
+      --container-padding: 4rem;
+    }
+  }
+}

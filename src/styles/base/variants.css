@@ -1,11 +1,1 @@
-@variant hocus {
-  @media (hover: hover) {
-    &:hover {
-      @slot;
-    }
-  }
-
-  &:focus-visible {
-    @slot;
-  }
-}
+@import "winduum/tailwindcss/variants/index.css";

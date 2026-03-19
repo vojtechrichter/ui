@@ -1,42 +1,10 @@
 @import "winduum/src/base/defaults.css";
-@import "winduum/tailwindcss/base/defaults.css";
+@import "winduum/src/base/defaults-extended.css";
 
-:where(svg) {
-  display: block;
+:where(html) {
+  scroll-padding-top: var(--scroll-padding-top);
 
-  &:has([href]) {
-    stroke-width: 1.5;
-    stroke: currentcolor;
-    fill: none;
-  }
-
-  &:has([href*="-solid"]) {
-    stroke: none;
-    fill: currentcolor;
-  }
-}
-
-:where(img) {
-  display: block;
-  font-size: 0;
-}
-
-:where(ol:not([type]), ul, menu) {
-  padding: 0;
-  margin: 0;
-}
-
-:where([type="number"]) {
-  appearance: textfield;
-
-  &::-webkit-outer-spin-button,
-  &::-webkit-inner-spin-button {
-    appearance: none;
-  }
-}
-
-:where([type="search"]) {
-  &::-webkit-search-cancel-button {
-    appearance: none;
+  @media (width >= 60rem) and (width < 76rem) {
+    font-size: 87.5%;
   }
 }

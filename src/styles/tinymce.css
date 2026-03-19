@@ -1,2 +1,3 @@
 @import "./theme/main.css";
 @import "./components/(ui)/Text.css";
+@import "tailwindcss/theme.css";

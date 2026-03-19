@@ -1,0 +1,24 @@
+{
+  "socials": [
+    {
+      "name": "Instagram",
+      "url": "https://instagram.com",
+      "icon": "#simpleicons-solid/instagram"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://LinkedIn.com",
+      "icon": "#simpleicons-solid/linkedin"
+    },
+    {
+      "name": "X",
+      "url": "https://x.com",
+      "icon": "#simpleicons-solid/x"
+    },
+    {
+      "name": "Facebook",
+      "url": "https://facebook.com",
+      "icon": "#simpleicons-solid/facebook"
+    }
+  ]
+}

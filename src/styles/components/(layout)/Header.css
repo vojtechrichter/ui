@@ -1,6 +1,9 @@
-@theme {
-  --x-header-height: 4rem;
-  --scroll-padding-top: calc(var(--x-header-height) + 1rem);
+@layer theme {
+  :root,
+  :host {
+    --scroll-padding-top: calc(var(--x-header-height) + 1rem);
+    --x-header-height: 4rem;
+  }
 }
 
 @layer utilities {

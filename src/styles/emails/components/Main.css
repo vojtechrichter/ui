@@ -1,13 +1,1 @@
-.x-main {
-  font-family: var(--default-font-family);
-  background-color: var(--color-body);
-  color: var(--color-main);
-  color-scheme: light;
-  min-width: 320px;
-  box-sizing: content-box;
-}
-
-.x-main-body {
-  background-color: var(--color-body-primary);
-  border-radius: var(--radius);
-}
+@import "winduum-email/src/components/main/default.css";

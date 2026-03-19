@@ -1,0 +1,19 @@
+<nav n:class="'x-pagination flex gap-2', $classAttribute ?? ''" aria-label="{_'Stránkování'}">
+    <a
+        n:attr="href: $iterator->counter !== 4 ? '#'"
+        n:class="
+            'x-button square sm',
+            $iterator->first ? 'pointer-events-none' : 'muted'
+        "
+        n:foreach="range(1,5) as $item"
+        aria-current={$iterator->first ? 'page' : null}
+    >
+        {if $iterator->last}
+            8
+        {elseif $iterator->counter === 4}
+            ...
+        {else}
+            {$iterator->counter}
+        {/if}
+    </a>
+</nav>

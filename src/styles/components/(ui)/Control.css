@@ -1,11 +1,13 @@
 @import "winduum/src/components/control/props/default.css" layer(theme);
 @import "winduum/src/components/control/props/floating.css" layer(theme);
 @import "winduum/src/components/control/props/select.css" layer(theme);
+@import "winduum/src/components/control/props/select-picker.css" layer(theme);
 @import "winduum/src/components/control/props/icon.css" layer(theme);
 @import "winduum/src/components/control/default.css" layer(utilities);
 @import "winduum/src/components/control/interactive.css" layer(utilities);
 @import "winduum/src/components/control/file.css" layer(utilities);
 @import "winduum/src/components/control/select.css" layer(utilities);
+@import "winduum/src/components/control/select-picker.css" layer(utilities);
 @import "winduum/src/components/control/icon.css" layer(utilities);
 @import "winduum/src/components/control/floating.css" layer(utilities);
 @import "winduum/src/components/control/invalid.css" layer(utilities);

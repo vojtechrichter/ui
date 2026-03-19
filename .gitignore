@@ -6,4 +6,8 @@
 /public/**/*.html
 /public/**/*.json
 /public/userfiles
+/public/icons.svg
+/src/+.css
+.agents/skills
+.claude
 !.gitkeep

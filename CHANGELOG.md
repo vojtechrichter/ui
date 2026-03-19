@@ -1,3 +1,40 @@
+## v4.3.0
+* feat(bc): new heroicons vite plugin, icons are now generated upon build to `public/icons.svg`
+* feat(bc): removed src/icons.svg, use src/icons directory instead
+* feat(bc): Footer and Header are now addable via main.json
+* feat(bc): updated Header and Footer default paths
+* feat(bc): replaced eslint with oxlint
+* feat(bc): changed layouts/default.latte assets paths for links and scripts
+* feat(bc): added winduum-email and simplified email CSS configuration
+* feat: deps update, vite v8, @newlogic-digital/core v4, tailwindcss v4.2, latte v3.1
+* feat: added simpleicons social icons
+* feat: removed .aiassistant and updated AGENTS.md
+* feat: new default font Inter
+* feat: updated component default styles
+* feat: updated default colors to match the Newlogic Design System
+* feat: updated cookieconsent component to match the Newlogic Design System
+* feat: removed cookieconsent css styles
+* feat: updated email styles
+* feat: added a new Pagination component
+* feat: added a new Marquee component
+* feat: dark theme disabled by default
+* feat: more layout configuration via main.json
+* feat: added socials.json with default socials links
+* feat: added x-image controller
+
+## v4.2.3
+* feat: added .aiassistant rules, AGENTS.md and CLAUDE.md
+* feat: added tailwindcss to tinymce.css, improved source detection
+* fix: stylesheets preload main.json
+
+## v4.2.2
+* feat: deps update, naja v3.3
+* feat: added npm run lint, removed npm run npm-*
+
+## v4.2.1
+* feat: added Popover Autocomplete example
+* feat: deps update and minor changes
+
 ## v4.2.0
 * feat(bc): removed neostandard in favor of recommended rules
 * feat(tailwindcss): added hocus variant

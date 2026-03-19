@@ -2,3 +2,10 @@
 @import "winduum/src/components/check/default.css" layer(utilities);
 @import "winduum/src/components/check/interactive.css" layer(utilities);
 @import "winduum/src/components/check/invalid.css" layer(utilities);
+
+@layer theme {
+  :root,
+  :host {
+    --x-check-line-height: var(--x-check-size);
+  }
+}

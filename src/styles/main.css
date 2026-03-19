@@ -5,7 +5,7 @@
 @import "./base/defaults.css" layer(base);
 @import "./components/+.css";
 @import "./utils/+.css";
-@import "tailwindcss/utilities" layer(utilities);
+@import "tailwindcss/utilities" layer(utilities) source("../");
 @import "winduum/tailwindcss/variants/dark.css";
 @import "./base/breakpoints.css";
 @import "./base/keyframes.css";

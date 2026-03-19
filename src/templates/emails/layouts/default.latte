@@ -16,9 +16,9 @@
         <meta name="supported-color-schemes" content="light dark">
     {/if}
 
-    <link rel="stylesheet" href="/src/styles/emails/main.css">
+    <link rel="stylesheet" href="{$assets->links->emails->main|asset}">
 
-    <script type="module" n:if="VITE_SERVER">
+    <script type="module" n:if="\VITE_SERVER">
         if (import.meta.hot && window.location.search === '?send') {
             import.meta.hot.send('my:send', {
                 filename: window.location.href,
@@ -32,9 +32,9 @@
 <body>
     <table class="x-main w-full" align="center">
         <tr>
-            <td class="p-[20px]" align="center">
+            <td class="p-container" align="center">
                 <table class="x-main-body container">
-                    {include '../../utils/sections.latte', sections => $body}
+                    {include '../../utils/components.latte', components => $body}
                 </table>
             </td>
         </tr>
